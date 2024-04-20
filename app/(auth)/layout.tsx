@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "../globals.css";
 import ToasterContext from "@/components/ToasterContext";
 import Provider from "../../components/Provider";
-import {useSession} from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +17,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { data: session } = useSession(); // Retrieve the session object
+
   return (
     <html lang="en">
       <body className={`${inter.className} bg-purple-1`}>
@@ -24,7 +26,6 @@ export default function RootLayout({
           <ToasterContext />
           {children}
         </Provider>
-        
       </body>
     </html>
   );
