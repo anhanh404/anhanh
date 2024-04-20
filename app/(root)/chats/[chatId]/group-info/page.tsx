@@ -43,7 +43,7 @@ export default function GroupInfo() {
         formState: { errors }, 
     } = useForm();
 
-    const uploadPhoto = (result) => {
+    const uploadPhoto = (result: CldUploadResult) => {
         setValue("groupPhoto", result?.info?.secure_url);
     }
     const router = useRouter();
