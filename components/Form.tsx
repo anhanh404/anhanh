@@ -124,7 +124,7 @@ const Form = ({ type }) => {
                     </Link>
                 ) : (
                     <Link href="/register">
-                        <p className="text-center">Don't have an account? Register Here!</p>
+                        <p className="text-center">Dont have an account? Register Here!</p>
                     </Link>
                 )}
             </div>
