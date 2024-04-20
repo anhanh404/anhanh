@@ -29,8 +29,10 @@ export default function GroupInfo() {
         }
     }
     useEffect(() => {
-    if (currentUser && chatId) seenMessages()
-  }, [currentUser, chatId])
+    if (chatId) {
+      getChatDetails();
+    }
+  }, [chatId]);
 
     const {
         register, 
