@@ -6,7 +6,6 @@ import {useForm} from "react-hook-form"
 import { CldUploadButton } from "next-cloudinary";
 import Loader from "@/components/Loader";
 import { useRouter } from "next/navigation";
-import { CldUploadResult } from "next-cloudinary";
 
 export default function GroupInfo() {
 
@@ -44,7 +43,7 @@ export default function GroupInfo() {
         formState: { errors }, 
     } = useForm();
 
-    const uploadPhoto = (result: CldUploadResult) => {
+    const uploadPhoto = (result) => {
         setValue("groupPhoto", result?.info?.secure_url);
     }
     const router = useRouter();
