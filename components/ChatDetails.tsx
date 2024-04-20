@@ -8,7 +8,7 @@ import { CldUploadButton } from 'next-cloudinary';
 import MessageBox  from './MessageBox';
 import { pusherClient } from '@/lib/pusher';
 
-export default function chatDetails({chatId}) {
+export default function ChatDetails({chatId}) {
     const [loading, setLoading] = useState(true);
     const [chat, setChat] = useState([])
     const [otherMembers, setOtherMembers] = useState([])
