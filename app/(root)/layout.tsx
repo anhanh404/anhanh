@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
+import { useSession } from "next-auth/react";
 import Provider from "@/components/Provider";
 import Topbar from "@/components/Topbar";
 import BottomBar from "@/components/BottomBar";
@@ -17,16 +18,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { data: session } = useSession();
+
   return (
     <html lang="en">
-  <body className={`${inter.className} bg-blue-2`}>
-    <Provider>
-        <Topbar />
-        {children}
-        <BottomBar />
-    </Provider>
-  </body>
-</html>
-
+      <body className={`${inter.className} bg-blue-2`}>
+        <Provider session={session}>
+          <Topbar />
+          {children}
+          <BottomBar />
+        </Provider>
+      </body>
+    </html>
   );
 }
