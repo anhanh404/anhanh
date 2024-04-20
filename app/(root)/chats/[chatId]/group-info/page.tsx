@@ -6,6 +6,7 @@ import {useForm} from "react-hook-form"
 import { CldUploadButton } from "next-cloudinary";
 import Loader from "@/components/Loader";
 import { useRouter } from "next/navigation";
+import { CldUploadResult } from "next-cloudinary";
 
 export default function GroupInfo() {
 
