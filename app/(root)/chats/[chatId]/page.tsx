@@ -5,7 +5,7 @@ import ChatLists from "@/components/ChatLists";
 import ChatDetails from "@/components/ChatDetails";
 import { useEffect } from "react";
 
-export default function chatPage() {
+export default function ChatPage() {
     const {chatId} = useParams();
     
     const {data:session} = useSession();
