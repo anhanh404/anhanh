@@ -114,7 +114,7 @@ const Form = ({ type }) => {
                     </div>
                     
                     <button className="button" type="submit">
-                        {type === "register" ? "Join Free" : "Let's Chat" }
+                        {type === "register" ? "Join Free" : "Let&apos;s Chat" }
                     </button>
                 </form>
 
