@@ -40,7 +40,7 @@ export default function GroupInfo() {
         setValue,
         reset,
         handleSubmit, 
-        formState: { error }, 
+        formState: { errors }, 
     } = useForm();
 
     const uploadPhoto = (result) => {
