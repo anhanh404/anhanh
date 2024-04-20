@@ -27,7 +27,7 @@ export default function Profile() {
         setValue,
         reset,
         handleSubmit, 
-        formState: { error }, 
+        formState: { errors }, 
     } = useForm();
 
     const uploadPhoto = (result) => {
